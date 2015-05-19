@@ -5,10 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>zuzu money party</title>
 		<meta name="author" content="jlucaas" />
-		<link rel="shortcut icon" href="favicon.ico" />
-		<link href="style/main.css" rel="stylesheet" type="text/css">
-		<link href="css/miley.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link href="/style/main.css" rel="stylesheet" type="text/css">
+		<link href="/css/miley.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
@@ -24,7 +24,8 @@
 		</div>
 
 		<div class="above-game">
-		  <a class="restart-button">Recomeçar</a>
+		  <a class="restart-button" style="margin-left: 2px">Recomeçar</a>
+		  <a class="restart-button" href="javascript:party_details()">Detalhes da festa</a>
 		</div>
 
 		<div class="game-container">
@@ -87,9 +88,20 @@
 	        var stage = "stage" + i++;
 	        $('html').prop("class", stage);
 
-	    }, 10000);
+	    }, 5000);
 
 	});
+
+	function party_details() {
+
+		if (!manager.isGameTerminated()) {
+			alert("Jogue pelo menos uma vez antes de saber!")
+			return;
+		}
+
+		window.location = "/requestInvite";
+
+	}
 
   </script>
 

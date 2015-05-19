@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" class="stage0">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>zuzu money party</title>
+		<meta name="author" content="jlucaas" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link href="/style/main.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen"/>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		
+	</head>
+	<body>
+	
+
+	<div class="container">
+		<div class="heading">
+		  <h1 class="title">zuzu48</h1>
+		  <div class="scores-container">
+		    
+		  </div>
+		</div>
+
+		<p class="zuzu_colors">Olá, gente. Obrigado por terem jogado zuzu48™. Agora espero você na
+		minha festa.</p>
+
+		<p class="zuzu_colors">Endereço: Rua Sebastião Fabiano Dias, 233. Belvedere.<br />
+		Horário: 19h (aceitamos atrasos casuais)<br />
+		Data: 22/05/15</p>
+
+		<p class="zuzu_colors">Nos vemos lá!</p>
+
+  	</div>
+
+  	<script type="text/javascript">
+
+	$(window).load(function () {
+	  	var i = 0;
+	    var n = 3;
+
+	    setInterval(function () {
+	        if (i == n)
+	        	i = 0;
+
+	        var stage = "stage" + i++;
+	        $('html').prop("class", stage);
+
+	    }, 5000);
+
+	});
+
+	</script>
+
+	</body>
+</html>
