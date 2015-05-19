@@ -89,7 +89,7 @@
 
   	  index = (index + 1 < images.length) ? index + 1 : 0;
 
-  	  $('.background').fadeOut(500, function(){
+  	  $('html').fadeOut(500, function(){
 
   	    $(this).css('background-image', 'url('+ images[index] + ')')
 
