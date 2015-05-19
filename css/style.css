@@ -16,6 +16,7 @@ html {
     background-position:center center;
     background-repeat:no-repeat;
     background-size:cover;
+    background-attachment: fixed;
     width:100vw;
     height:100vh;
     transition:background-image 2s cubic-bezier(.44,.75,.38,.73)
