@@ -75,6 +75,28 @@
 
   </div>
 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- zuzumoneyparty -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-4140418844252130"
+       data-ad-slot="3262997140"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-63165221-1', 'auto');
+	  ga('send', 'pageview');
+
+  </script>
+
   <script type="text/javascript">
 
 	$(window).load(function () {
@@ -95,7 +117,8 @@
 	function party_details() {
 
 		if (!manager.storageManager.getTerminatedOnce()) {
-			alert("Jogue pelo menos uma vez antes de saber!")
+			alert("Jogue pelo menos uma vez antes de saber!");
+			ga('send', 'event', 'button', 'click-details', manager.score);
 			return;
 		}
 
