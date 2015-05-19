@@ -6,9 +6,9 @@
 		<title>zuzu money party</title>
 		<meta name="author" content="jlucaas" />
 		<link rel="shortcut icon" href="/favicon.ico" />
-		<link href="/style/main.css" rel="stylesheet" type="text/css">
-		<link href="/css/miley.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen"/>
+		<link href="style/main.css" rel="stylesheet" type="text/css">
+		<link href="css/miley.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
@@ -94,7 +94,7 @@
 
 	function party_details() {
 
-		if (!manager.isGameTerminated()) {
+		if (!manager.storageManager.getTerminatedOnce()) {
 			alert("Jogue pelo menos uma vez antes de saber!")
 			return;
 		}

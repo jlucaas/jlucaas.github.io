@@ -19,8 +19,9 @@ window.fakeStorage = {
 };
 
 function LocalStorageManager() {
-  this.bestScoreKey     = "bestScore";
-  this.gameStateKey     = "gameState";
+  this.bestScoreKey      = "bestScore";
+  this.gameStateKey      = "gameState";
+  this.terminatedOnceKey = "terminatedOnce";
 
   var supported = this.localStorageSupported();
   this.storage = supported ? window.localStorage : window.fakeStorage;
@@ -61,3 +62,11 @@ LocalStorageManager.prototype.setGameState = function (gameState) {
 LocalStorageManager.prototype.clearGameState = function () {
   this.storage.removeItem(this.gameStateKey);
 };
+
+LocalStorageManager.prototype.getTerminatedOnce = function() {
+  return this.storage.getItem(this.terminatedOnceKey) == "true";
+}
+
+LocalStorageManager.prototype.setTerminatedOnce = function(terminatedOnce) {
+  this.storage.setItem(this.terminatedOnceKey, terminatedOnce);
+}
