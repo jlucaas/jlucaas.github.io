@@ -34,6 +34,15 @@ h1 {
   letter-spacing: -15px;
 }
 
+
+.game-container .game-message {
+  background: rgba(238, 228, 218, 0.9);
+}
+
+.game-container .game-message.game-won {
+      background: rgba(237, 194, 46, 0.9);
+      color: #f9f6f2; }
+
 .stage0{background-image:url("../img/bgs/bg1.jpg")}
 .stage1{background-image:url("../img/bgs/bg2.jpg")}
 .stage2{background-image:url("../img/bgs/bg3.jpg")}
