@@ -6,17 +6,109 @@
 		<title>zuzu money party</title>
 		<meta name="author" content="jlucaas" />
 		<link rel="shortcut icon" href="favicon.ico" />
+		<link href="style/main.css" rel="stylesheet" type="text/css">
+		<link href="css/miley.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	</head>
 	<body>
-		<div class="wrapper">
-		    <div class="outer-wrapper">
-		        <div class="table-wrapper">
-		            <div class="table-cell-wrapper">
-		                <h1>SOON</h1>
-		            </div>
-		        </div>
-		    </div>
-		</div>
+
+	<div class="background">
+	<div class="pattern">
+		<div class="container">
+    <div class="heading">
+      <h1 class="title">zuzu48</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <a class="restart-button">Recomeçar</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Continue tentando!</a>
+          <a class="retry-button">Tente novamente</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+
+  <script type="text/javascript">
+
+  	var images = [
+  	  'img/bgs/bg1.jpg',
+  	  'img/bgs/bg2.jpg',
+  	  'img/bgs/bg3.jpg',
+  	];
+
+  	var index = 0;
+
+  	setInterval(change_up, 6000);
+
+  	function change_up(){
+
+  	  index = (index + 1 < images.length) ? index + 1 : 0;
+
+  	  $('.background').fadeOut(500, function(){
+
+  	    $(this).css('background-image', 'url('+ images[index] + ')')
+
+  	    $(this).fadeIn(500);
+
+  	  });
+  	}
+  </script>
+
+	<script src="js/bind_polyfill.js"></script>
+	<script src="js/classlist_polyfill.js"></script>
+	<script src="js/animframe_polyfill.js"></script>
+	<script src="js/keyboard_input_manager.js"></script>
+	<script src="js/html_actuator.js"></script>
+	<script src="js/grid.js"></script>
+	<script src="js/tile.js"></script>
+	<script src="js/local_storage_manager.js"></script>
+	<script src="js/game_manager.js"></script>
+	<script src="js/application.js"></script>
+
 	</body>
 </html>
