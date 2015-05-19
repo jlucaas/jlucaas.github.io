@@ -3,56 +3,37 @@ html, body {
 	padding: 0px;
 }
 
-html { 
-  background: url("../img/bg.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
+body:after{
+    display:none;
+    content:
+            url("../img/bgs/bg1.jpg")
+            url("../img/bgs/bg2.jpg")
+            url("../img/bgs/bg3.jpg")
 }
 
-h1 {
-	font-size: 150px;
-	color: #F5E858;
-	letter-spacing: -15px;
+
+html {
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    transition:background-image 2s cubic-bezier(.44,.75,.38,.73)
 }
 
 body {
 	background: url("../img/pattern.png") repeat;
 	font-family: 'Helvetica', 'Arial', sans-serif;
 	color: #fff;
-	min-height: 100%;
+	min-height: 100vh;
 }
 
-.wrapper {
-    background: #CCC;
-    height: 100%;
-    width: 100%;
-    margin: 0; padding: 0;
-    display: table;
+h1 {
+  font-size: 150px;
+  color: #F5E858;
+  letter-spacing: -15px;
 }
 
-.outer-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  margin: 0; padding: 0;
-}
-
-.table-wrapper {
-  display: table;
-  vertical-align: middle;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-}
-
-.table-cell-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  width: 100%;
-  height: 100%;  
-}
+.stage0{background-image:url("../img/bgs/bg1.jpg")}
+.stage1{background-image:url("../img/bgs/bg2.jpg")}
+.stage2{background-image:url("../img/bgs/bg2.jpg")}
