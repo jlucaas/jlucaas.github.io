@@ -40,6 +40,9 @@ h1 {
   font-size: 16pt;
 }
 
+#inviteText {
+  display: none;
+}
 
 .game-container .game-message {
   background: rgba(238, 228, 218, 0.9);
